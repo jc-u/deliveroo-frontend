@@ -1,0 +1,266 @@
+header {
+	background: white;
+}
+
+header .TopBar {
+	border-bottom: 1px solid #e9ebeb;
+	height: 60px;
+}
+
+.RestaurantInfos--center,
+header .TopBar--center {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 96vw;
+}
+
+header .TopBar--center {
+	align-items: center;
+	height: 100%;
+}
+
+header .Logo {
+	height: 70%;
+	overflow: hidden;
+}
+
+header .RestaurantInfos--center {
+	align-items: flex-start;
+	padding: 30px 0;
+}
+
+header .RestaurantInfos--texts {
+	flex: 1 1;
+	margin-right: 30px;
+}
+
+header .RestaurantInfos--texts h1 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 0.6rem;
+	font-weight: bold;
+}
+
+header .RestaurantInfos--texts p {
+	color: #868a8a;
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+header .RestaurantInfos--cover {
+	background: #f3f5f5;
+	border-radius: 5px;
+	overflow: hidden;
+	width: 350px;
+}
+
+.Content .Content--center {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 96vw;
+}
+
+.Content .Content--center .Menu {
+	flex: 1 1;
+	margin-right: 30px;
+	margin-bottom: -25px;
+}
+
+.Content .Content--center .Menu .MenuItems--items {
+	align-items: stretch;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+
+.Content .Content--center .Menu .MenuItems--items .MenuItem {
+	min-width: 300px;
+	padding: 0 10px 25px;
+	width: 50%;
+}
+
+.Content .Content--center .Menu .MenuItems--items .MenuItem .MenuItem--card {
+	align-items: flex-start;
+	background: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	height: 160px;
+	padding: 15px;
+	transition-duration: 0.3s;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card:hover {
+	box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card
+	.MenuItem--texts {
+	flex: 1 1;
+	margin-right: 15px;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card
+	.MenuItem--texts
+	h3 {
+	font-weight: 400;
+	margin: 0 0 0.5rem 0;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card
+	.MenuItem--texts
+	p {
+	color: #808484;
+	font-size: 0.9rem;
+	height: 2.6rem;
+	line-height: 1.3rem;
+	margin: 0 0 1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.Content .Content--center .Menu .MenuItems--items .MenuItem--infos {
+	display: flex;
+	align-items: center;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card
+	.MenuItem--infos
+	.MenuItem--price {
+	color: #808484;
+	font-size: 1.1rem;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card
+	.MenuItem--infos
+	.MenuItem--popular {
+	align-items: center;
+	color: #ff8000;
+	display: flex;
+	flex-direction: row;
+	font-size: 0.8rem;
+	font-weight: 800;
+	margin-left: 1rem;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem
+	.MenuItem--card
+	.MenuItem--infos
+	.MenuItem--popular
+	.feather-star {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem--card
+	.MenuItem--picture
+	> div {
+	border-radius: 5px;
+	height: 130px;
+	overflow: hidden;
+	position: relative;
+	width: 130px;
+}
+
+.Content
+	.Content--center
+	.Menu
+	.MenuItems--items
+	.MenuItem--card
+	.MenuItem--picture
+	img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+@media (max-width: 885px) {
+	header .RestaurantInfos--center {
+		flex-direction: column-reverse;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	header .RestaurantInfos--texts {
+		padding: 30px;
+	}
+
+	h1 {
+		font-size: 1.5rem !important;
+	}
+
+	p {
+		font-size: 1rem !important;
+	}
+
+	header .RestaurantInfos--cover {
+		border-radius: 0;
+		height: 200px;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.Content .Content--center .Menu {
+		margin: 0;
+	}
+}
+
+@media (max-width: 1124px) {
+	.Content .Content--center .Menu .MenuItems--items {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	.Content .Content--center .Menu .MenuItems--items .MenuItem {
+		width: 100%;
+	}
+}
