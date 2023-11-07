@@ -1,7 +1,7 @@
-const MenuCard = ({ meal }) => {
+const MenuCard = ({ meal, addToCart }) => {
 	return (
 		<>
-			<div className="MenuItem--card">
+			<div className="MenuItem--card" onClick={() => addToCart(meal)}>
 				<div className="MenuItem--texts">
 					<h3>{meal.title}</h3>
 					<p>{meal.description}</p>

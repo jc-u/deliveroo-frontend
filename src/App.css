@@ -220,6 +220,138 @@ header .RestaurantInfos--cover {
 	width: 100%;
 }
 
+.Content .Content--center .Cart {
+	position: sticky;
+	top: 0;
+	width: 350px;
+}
+
+.Content .Content--center .Cart .Cart--card {
+	align-items: stretch;
+	align-self: flex-start;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0;
+}
+
+.Content .Content--center .Cart .Cart--card .Cart--empty {
+	color: #868a8a;
+	padding: 3rem 0;
+	text-align: center;
+}
+
+.Content .Content--center .Cart .Cart--card .validate {
+	background: #00cdbd;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 10px;
+	padding: 1rem;
+}
+.Content .Content--center .Cart .Cart--card .disabled {
+	background: #bac3c3;
+	color: #8b9a9b;
+	cursor: not-allowed;
+	border: none;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 10px;
+	padding: 1rem;
+}
+
+.Cart--items {
+	border-bottom: 1px solid #d1d7d7;
+	margin: 0 10px;
+	max-height: calc(100vh - 300px);
+	overflow: auto;
+}
+
+.Cart--items .Cart--line {
+	align-items: flex-start;
+	display: flex;
+	padding: 1rem 0;
+}
+
+.Cart--items .Cart--line .Cart--counter {
+	align-items: center;
+	color: #808484;
+	display: flex;
+	margin-right: 10px;
+}
+
+.Cart--items .Cart--line .Cart--counter span {
+	min-width: 1rem;
+	text-align: center;
+}
+
+.Cart--items .Cart--line .Cart--counter .icon-minus,
+.icon-plus {
+	width: 20px;
+	height: 20px;
+	color: rgb(0, 206, 189);
+	cursor: pointer;
+}
+
+.Cart--items .Cart--line .Cart--item-name {
+	flex: 1 1;
+}
+
+.Cart--items .Cart--line .Cart--amount {
+	text-align: right;
+	width: 85px;
+}
+
+.Cart--results {
+	border-bottom: 1px solid #d1d7d7;
+	margin: 0 10px;
+	padding: 10px 0;
+}
+
+.Cart--results .Cart--result-line {
+	align-items: center;
+	display: flex;
+	padding: 0.5rem 0;
+}
+
+.Cart--results .Cart--result-line .Cart--result-name {
+	flex: 1 1;
+}
+
+.Cart--results .Cart--result-line .Cart--amount {
+	text-align: right;
+	width: 85px;
+}
+
+.Cart--total {
+	align-items: flex-start;
+	display: flex;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin: 0 10px;
+	padding: 1.3rem 0;
+}
+
+.Cart--total .Cart--result-name {
+	flex: 1 1;
+}
+
+.Cart--total .Cart--amount {
+	text-align: right;
+	width: 85px;
+}
+
+.Cart-minus-container {
+	display: none;
+}
+
 @media (max-width: 885px) {
 	header .RestaurantInfos--center {
 		flex-direction: column-reverse;
@@ -252,8 +384,76 @@ header .RestaurantInfos--cover {
 	.Content .Content--center .Menu {
 		margin: 0;
 	}
-}
 
+	.Content .Content--center .Cart {
+		display: none;
+	}
+
+	.Cart-minus-container {
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		bottom: 0;
+		box-shadow: 0 -3px 6px -2px rgb(0 0 0/7%);
+		justify-content: center;
+		padding: 12px 20px;
+		position: -webkit-sticky;
+		position: sticky;
+	}
+
+	.Cart-minus-cart-container {
+		width: 100%;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.Cart-minus-close-cart-modal {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		font-weight: 700;
+		height: 20px;
+		justify-content: center;
+		right: 0;
+		width: 20px;
+		align-self: flex-end;
+	}
+
+	.Cart-minus-button,
+	.Cart-minus-button .disabled {
+		align-items: center;
+		border: none;
+		border-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		display: flex;
+		font-weight: 700;
+		height: 60px;
+		width: 100%;
+	}
+	.Cart-minus-button {
+		justify-content: space-between;
+		background-color: #822774;
+		padding: 0 15px;
+	}
+	.disabled {
+		justify-content: center;
+	}
+	.Cart-minus-number-of-products {
+		align-items: center;
+		background-color: #36054f;
+		display: flex;
+		height: 30px;
+		justify-content: center;
+		width: 30px;
+	}
+	.Cart-minus-button.disabled {
+		background-color: #d3d3d3;
+		cursor: auto;
+	}
+}
 @media (max-width: 1124px) {
 	.Content .Content--center .Menu .MenuItems--items {
 		flex-direction: column;

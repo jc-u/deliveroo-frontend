@@ -1,7 +1,6 @@
 import MenuCard from "./MenuCard";
 
 const Menu = ({ menus, addToCart }) => {
-	console.log(addToCart);
 	return (
 		<div className="Menu">
 			{menus.categories.map((menu) => (
@@ -11,7 +10,7 @@ const Menu = ({ menus, addToCart }) => {
 						<div className="MenuItems--items">
 							{menu.meals.map((meal) => (
 								<div key={meal.id} className="MenuItem">
-									<MenuCard meal={meal} onClick={() => addToCart(meal)} />
+									<MenuCard meal={meal} addToCart={addToCart} />
 								</div>
 							))}
 						</div>
