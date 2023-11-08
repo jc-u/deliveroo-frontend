@@ -32,12 +32,15 @@ const Content = ({ data }) => {
 	};
 
 	const decrementQuantity = (itemId) => {
-		const updatedCart = cart.map((item) => {
-			if (item.id === itemId && item.quantity > 0) {
-				item.quantity -= 1;
-			}
-			return item;
-		});
+		const updatedCart = cart
+			.map((item) => {
+				if (item.id === itemId && item.quantity > 0) {
+					item.quantity -= 1;
+				}
+				return item;
+			})
+			.filter((item) => item.quantity > 0); // Supprime les éléments avec quantité 0
+
 		setCart(updatedCart);
 	};
 
