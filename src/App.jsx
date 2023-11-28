@@ -11,7 +11,7 @@ function App() {
 	const fetchData = async () => {
 		try {
 			const response = await axios.get(
-				"https://site--snappy-ring--qxptmkcwmrfx.code.run/"
+				"https://site--deliveroo--x8j5n6vjq4tz.code.run/"
 			);
 			setData(response.data);
 			setIsLoading(false);
